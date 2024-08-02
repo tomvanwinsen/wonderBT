@@ -3,7 +3,7 @@
     "themes": {
         "wonderbt": {
             "name": "WonderBT",
-            "repo": "https://github.com/tomvanwinsen/wonderBT/tree/master",
+            "repo": "https://github.com/tomvanwinsen/wonderBT",
             "zip": "https://github.com/tomvanwinsen/wonderBT/archive/master.zip",
             "summary": "Biljartmanager WonderCMS theme (2024). Theme works without Bootstrap and jQuery.",
             "version": "0.0.1",
