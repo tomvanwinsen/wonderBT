@@ -1,13 +1,13 @@
 {
     "version": 1,
     "themes": {
-        "wonderbt": {
-            "name": "WonderBT",
-            "repo": "https://github.com/tomvanwinsen/wonderBT/tree/master",
-            "zip": "https://github.com/tomvanwinsen/wonderBT/archive/master.zip",
-            "summary": "Biljartmanager WonderCMS theme (2024). Theme works without Bootstrap and jQuery.",
+        "wonderakc": {
+            "name": "WonderAKC",
+            "repo": "https://github.com/tomvanwinsen/wonderakc/tree/master",
+            "zip": "https://github.com/tomvanwinsen/wonderakc/archive/master.zip",
+            "summary": "AKC WonderCMS theme (2024).",
             "version": "0.0.1",
-            "image": "https://raw.githubusercontent.com/tomvanwinsen/wonderBT/master/preview.jpg"
+            "image": "https://raw.githubusercontent.com/tomvanwinsen/wonderakc/master/preview.jpg"
         }
     }
 }
