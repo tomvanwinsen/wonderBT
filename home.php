@@ -52,7 +52,6 @@
 			<div class="row">
 				<div class="col-lg-12 text-center padding40">
 					<?= $Wcms->page('content') ?>
-
 				</div>
 			</div>
 		</div>
