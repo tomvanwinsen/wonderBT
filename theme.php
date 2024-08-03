@@ -20,10 +20,7 @@
 		<meta name="twitter:description" content="<?= $Wcms->page('description') ?>" />
 
 		<!-- Website and page title -->
-		<title>
-			<?= $Wcms->get('config', 'siteTitle') ?> - <?= $Wcms->page('title') ?>
-
-		</title>
+		<title><?= $Wcms->get('config', 'siteTitle') ?> - <?= $Wcms->page('title') ?></title>
 
 		<!-- Admin CSS -->
 		<?= $Wcms->css() ?>
@@ -32,7 +29,7 @@
 		<link rel="stylesheet" rel="preload" as="style" href="<?= $Wcms->asset('css/style.css') ?>">
 	</head>
 	
-	<body class="body-test">
+	<body class="body-test-by-tom">
 		<!-- Admin settings panel and alerts -->
 		<?= $Wcms->settings() ?>
 
