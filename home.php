@@ -1,84 +1,131 @@
 <?php global $Wcms ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 	<head>
+		<!-- Encoding, browser compatibility, viewport -->
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
+		<!-- Website and page title -->
 		<title><?= $Wcms->get('config', 'siteTitle') ?> - <?= $Wcms->page('title') ?></title>
 		<meta name="description" content="<?= $Wcms->page('description') ?>">
 		<meta name="keywords" content="<?= $Wcms->page('keywords') ?>">
+		<link rel="shortcut icon" href="<?= $Wcms->asset('img/favicon.ico') ?>" />
+		<link rel="icon" type="image/png" href="<?= $Wcms->asset('img/favicon.png') ?>" />
 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Search Engine Optimization (SEO) -->
+		<meta name="title" content="<?= $Wcms->get('config', 'siteTitle') ?> - <?= $Wcms->page('title') ?>" />
+		<meta name="description" content="<?= $Wcms->page('description') ?>">
+		<meta name="keywords" content="<?= $Wcms->page('keywords') ?>">
+		<meta property="og:url" content="<?= $Wcms->getCurrentPageUrl() ?>" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="<?= $Wcms->get('config', 'siteTitle') ?>" />
+		<meta property="og:title" content="<?= $Wcms->page('title') ?>" />
+		<meta name="twitter:title" content="<?= $Wcms->get('config', 'siteTitle') ?> - <?= $Wcms->page('title') ?>" />
+		<meta name="twitter:description" content="<?= $Wcms->page('description') ?>" />
 
 		<!-- Admin CSS -->
 		<?= $Wcms->css() ?>
-
+		
 		<!-- Theme CSS -->
-		<link rel="stylesheet" href="<?= $Wcms->asset('css/style.css') ?>">
+		<link rel="stylesheet" rel="preload" as="style" href="<?= $Wcms->asset('css/style.css') ?>?ver=1.26">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+
+		<script>
+		/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+		function myFunction() {
+			var x = document.getElementById("mainNav");
+			if (x.style.display === "block") {
+				x.style.display = "none";
+			} else {
+				x.style.display = "block";
+			}
+		}
+		</script>
 	</head>
 
-	<body>
+	<body class="home">
+		<!-- Admin settings panel and alerts -->
 		<?= $Wcms->settings() ?>
 		<?= $Wcms->alerts() ?>
 
-		<nav class="navbar navbar-expand-lg navbar-light navbar-default">
-			<div class="container">
-				<a class="navbar-brand" href="<?= $Wcms->url() ?>">
-					<?= $Wcms->get('config', 'siteTitle') ?>
-				</a>
 
-				<div class="navbar-header">
-				<button type="button" class="navbar-toggler navbar-toggle" data-toggle="collapse" data-target="#menu-collapse">
-					<span class="navbar-toggler-icon">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</span>
-				</button>
+		<section id="brand-nav"> 
+			<div class="inner">
+
+				<div class="branding">
+					<span class="logo"><a href="/"><img src="<?= $Wcms->asset('img/akc.svg') ?>"></a></span>
+					<span class="name"><?= $Wcms->get('config', 'siteTitle') ?></span>
 				</div>
 
-				<div class="collapse navbar-collapse" id="menu-collapse">
-					<ul class="nav navbar-nav navbar-right ml-auto">
-						<?= $Wcms->menu() ?>
-					</ul>
-				</div>
+				<div class="main-navigation">
+					<div class="topbar">menu</div>
+						<nav id="mainNav">
+							<ul class="menu">
+								<!-- Menu -->
+								<li class="nav-item"><a class="nav-link" href="/home">Home</a></li>
+								<li class="nav-item has-submenu"><a class="nav-link" href="/bt/results.php?id=bt-28e58472-1684-4f42-9b01-04b09edcd631">Competitie</a>
+									<ul class="submenu">
+										<!-- SubMenu -->
+										<li class="subnav-item"><a class="nav-link" href="/bt/results.php?id=bt-28e58472-1684-4f42-9b01-04b09edcd631">Uitslagen</a></li>
+										<li class="subnav-item"><a class="nav-link" href="/bt/schedule.php?id=bt-28e58472-1684-4f42-9b01-04b09edcd631">Programma</a></li>
+										<li class="subnav-item"><a class="nav-link" href="/bt/teamranking.php?id=bt-28e58472-1684-4f42-9b01-04b09edcd631">Stand</a></li>
+										<li class="subnav-item"><a class="nav-link" href="/bt/playerranking.php?id=bt-28e58472-1684-4f42-9b01-04b09edcd631">Persoonlijk klassement</a></li>
+										<li class="subnav-item"><a class="nav-link" href="/bt/periods.php?id=bt-28e58472-1684-4f42-9b01-04b09edcd631">Periode standen</a></li>
+										<li class="subnav-item"><a class="nav-link" href="/bt/teams.php?id=bt-28e58472-1684-4f42-9b01-04b09edcd631">Teams & Spelers</a></li>
+										<li class="subnav-item"><a class="nav-link" href="/bt/changes.php?id=bt-28e58472-1684-4f42-9b01-04b09edcd631">Herzieningen</a></li>
+									</ul>
+								</li>
+								<li class="nav-item"><a class="nav-link" href="/speellocaties">Speellocaties</a></li>
+								<li class="nav-item"><a class="nav-link" href="/reglementen">Reglementen</a></li>
+								<li class="nav-item"><a class="nav-link" href="/mededelingen">Mededelingen</a></li>
+							</ul>
+						</nav>
+						<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+						<a href="javascript:void(0);" class="icon-menu" onclick="myFunction()">
+							<i class="fa fa-bars"></i>
+						</a>
+					</div>
+				</div> 
+
+			</div> 
+		</section><!-- /#nav-holder -->
+
+
+		<section id="hero-banner"> 
+			<div class="inner">
+				<?= $Wcms->block('subside') ?>
+				<a href="/mededelingen" class="button"><i class="fa fa-eye" aria-hidden="true"></i> Lees verder</a>
 			</div>
-		</nav>
+		</section><!-- /#hero-banner-->
 
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 text-center padding40">
-					<?= $Wcms->page('content') ?>
-				</div>
+
+		<section id="page-holder">
+			<div class="inner">
+				<?= $Wcms->page('content') ?>
 			</div>
-		</div>
+		</section><!-- /#page-holder -->
 
-		<div class="container-fluid blueBackground whiteFont">
-			<div class="row">
-				<div class="col-lg-12 text-center padding40">
-					<?= $Wcms->block('subside') ?>
 
-				</div>
-			</div>
-		</div>
-
-		<footer class="container-fluid">
-			<div class="text-right padding20">
+		<section id="footer-holder">
+			<div class="inner">				
 				<?= $Wcms->footer() ?>
+			</div>
+		</section><!-- /#footer-holder -->
 
+
+		<footer class="copyright">
+			<div class="inner">
+				<!-- Footer -->
+				<div class="">© <?php echo date("Y"); ?> <?= $Wcms->get('config', 'siteTitle') ?></div>
 			</div>
 		</footer>
 
-		<?php
-			if(!$Wcms->loggedIn) {
-				echo "<script src='https://code.jquery.com/jquery-1.12.4.min.js' integrity='sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ' crossorigin='anonymous'></script>";
-			}
-		?>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		<?= $Wcms->js() ?>
+
+		<!-- Admin JavaScript. More JS libraries can be added below -->
+		<?= $Wcms->js() ?>		
 
 	</body>
 </html>

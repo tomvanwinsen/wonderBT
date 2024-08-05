@@ -1,0 +1,171 @@
+<?php global $Wcms ?>
+
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<!-- Encoding, browser compatibility, viewport -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Website and page title -->
+		<title><?= $Wcms->get('config', 'siteTitle') ?> - <?= $Wcms->page('title') ?></title>
+		<meta name="description" content="<?= $Wcms->page('description') ?>">
+		<meta name="keywords" content="<?= $Wcms->page('keywords') ?>">
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="icon" type="image/png" href="/img/favicon.png" />
+
+		<!-- Search Engine Optimization (SEO) -->
+		<meta name="title" content="<?= $Wcms->get('config', 'siteTitle') ?> - <?= $Wcms->page('title') ?>" />
+		<meta name="description" content="<?= $Wcms->page('description') ?>">
+		<meta name="keywords" content="<?= $Wcms->page('keywords') ?>">
+		<meta property="og:url" content="<?= $Wcms->getCurrentPageUrl() ?>" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="<?= $Wcms->get('config', 'siteTitle') ?>" />
+		<meta property="og:title" content="<?= $Wcms->page('title') ?>" />
+		<meta name="twitter:title" content="<?= $Wcms->get('config', 'siteTitle') ?> - <?= $Wcms->page('title') ?>" />
+		<meta name="twitter:description" content="<?= $Wcms->page('description') ?>" />
+
+		<!-- Admin CSS -->
+		
+		<!-- Theme CSS -->
+		<link rel="stylesheet" rel="preload" as="style" href="css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+	</head>
+
+	<body class="home">
+
+
+
+
+
+		<section id="brand-nav"> 
+			<div class="inner">
+
+				<div class="branding">
+					<span class="logo"><img src="img/akc.svg"></span>
+					<span class="name"><?= $Wcms->get('config', 'siteTitle') ?></span>
+				</div>
+
+				<div class="main-navigation">
+					<div class="topbar">menu</div>
+						<nav id="mainNav">
+							<ul class="menu">
+								<!-- Menu -->
+								<li class="nav-item"><a class="nav-link" href="https://deballen.nl/home">Home</a></li>
+								<li class="nav-item has-submenu"><a class="nav-link" href="https://deballen.nl/competitie">Competitie</a>
+									<ul class="submenu">
+										<!-- SubMenu -->
+										<li class="subnav-item"><a class="nav-link" href="https://deballen.nl/uitslagen">Uitslagen</a></li>
+										<li class="subnav-item"><a class="nav-link" href="https://deballen.nl/programma">Programma</a></li>
+										<li class="subnav-item"><a class="nav-link" href="https://deballen.nl/stand">Stand</a></li>
+										<li class="subnav-item"><a class="nav-link" href="https://deballen.nl/persoonlijk-klassement">Persoonlijk klassement</a></li>
+										<li class="subnav-item"><a class="nav-link" href="https://deballen.nl/periode-standen">Periode standen</a></li>
+										<li class="subnav-item"><a class="nav-link" href="https://deballen.nl/teams-spelers">Teams & Spelers</a></li>
+										<li class="subnav-item"><a class="nav-link" href="https://deballen.nl/herzieningen">Herzieningen</a></li>
+									</ul>
+								</li>
+								<li class="nav-item"><a class="nav-link" href="https://deballen.nl/speellocaties">Speellocaties</a></li>
+								<li class="nav-item"><a class="nav-link" href="https://deballen.nl/reglementen">Reglementen</a></li>
+								<li class="nav-item"><a class="nav-link" href="https://deballen.nl/mededelingen">Mededelingen</a></li>
+							</ul>
+						</nav>
+						<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+						<a href="javascript:void(0);" class="icon-menu" onclick="myFunction()">
+							<i class="fa fa-bars"></i>
+						</a>
+					</div>
+				</div> 
+
+			</div> 
+		</section><!-- /#nav-holder -->
+
+
+
+
+
+		<section id="hero-banner"> 
+			<div class="inner">
+
+				<?= $Wcms->block('subside') ?>
+
+				<h1>Teamleider app</h1>
+				<p>De Biljartteller AKC competitie zal vanaf dit seizoen gebruik maken van de Biljartmanager. Wedstrijd uitslagen moeten worden doorgegeven met de Teamleider app. Meer info op de <a href="/mededelingen">Mededelingen</a> pagina.</p>
+
+				<a href="/mededelingen" class="button"><i class="fa fa-eye" aria-hidden="true"></i> Lees verder</a>
+
+			</div>
+		</section><!-- /#hero-banner-->
+
+
+
+
+
+		<section id="page-holder">
+			<div class="inner">
+
+				<?= $Wcms->page('content') ?>
+
+				<h1>Mededelingen</h1>
+
+				<div id="lipsum">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum magna mauris, a iaculis justo lacinia sit amet. Integer elementum lacinia dui, ac faucibus metus posuere vitae. Ut pharetra orci feugiat urna iaculis semper. Cras eget bibendum metus. Morbi tellus lectus, feugiat id dignissim sed, accumsan nec nulla. Praesent dapibus lectus ac purus rutrum, vitae dapibus sapien varius. Donec ornare nisi sit amet odio ultrices, ut cursus neque tristique. In hac habitasse platea dictumst. In convallis, libero vitae vulputate mattis, felis neque lacinia ipsum, vel convallis felis massa eget nisi. Nullam neque arcu, posuere ac eros a, venenatis lacinia velit.</p>
+<p>Nulla vel elit tempus, rhoncus turpis in, dapibus libero. Sed sed quam non nisi facilisis auctor vitae eu nulla. In et metus vel nunc ornare finibus. Sed orci lorem, congue ultrices mattis sit amet, dictum pharetra enim. Etiam sit amet dui ullamcorper, suscipit augue ut, maximus dolor. Morbi semper ligula sed maximus convallis. <a href="">Maecenas condimentum</a> convallis lorem ac tempor. Pellentesque ut tristique erat. Nunc non placerat dolor, id iaculis enim. Nunc vehicula, sem in pulvinar ullamcorper, nisi velit venenatis nibh, ut aliquam tellus metus et justo. Nam ac commodo felis.</p>
+<p>Proin quis tempus libero. Nullam vel turpis dignissim, dapibus massa vel, convallis sem. Nunc facilisis purus eu molestie mollis. Aenean congue, augue non egestas sodales, justo velit faucibus metus, non aliquet felis nunc eu felis. In pharetra neque quam, et rutrum lorem lobortis in. Etiam sollicitudin arcu elit, ac scelerisque massa convallis et. Cras ut lacus eros. Sed egestas nec erat ac mollis. Vestibulum luctus odio a placerat venenatis. Curabitur commodo, nibh eget ultricies tempus, purus metus sollicitudin nisl, sed congue tellus lacus eu eros.</p>
+<p>Praesent cursus ipsum id lorem pellentesque bibendum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer lorem turpis, porttitor laoreet erat vel, feugiat semper libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam hendrerit dui ac massa posuere, vel dignissim turpis maximus. Nulla dignissim hendrerit eros et efficitur. Morbi vestibulum consectetur nunc eget facilisis. Integer scelerisque turpis justo, non imperdiet nisl euismod et. Maecenas a nisi vel leo pulvinar porttitor. Mauris sit amet elit rutrum, tincidunt arcu sed, maximus urna. Aenean nisl enim, venenatis non ex a, iaculis iaculis purus. Ut maximus, orci non rhoncus sollicitudin, ligula est porttitor lectus, a posuere lacus leo ac ipsum.</p>
+<p>Proin at elementum augue. Nullam dictum massa neque, quis blandit justo facilisis ut. Suspendisse eget quam luctus, viverra nulla a, rhoncus mauris. Mauris et sodales est, ac tincidunt est. Aenean eu volutpat enim, at tincidunt neque. Integer gravida feugiat velit suscipit rhoncus. Mauris eget porta tellus. Ut sed elementum magna.</p>
+				</div>
+
+			</div>
+		</section><!-- /#page-holder -->
+
+
+
+
+
+		<section id="footer-holder">
+			<div class="inner">
+				
+				<?= $Wcms->footer() ?>
+
+				<h3>Sed bibendum magna mauris</h3>
+
+				<div id="lipsum">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum magna mauris, a iaculis justo lacinia sit amet. Integer elementum lacinia dui, ac faucibus metus posuere vitae. Ut pharetra orci feugiat urna iaculis semper. Cras eget bibendum metus. Morbi tellus lectus, feugiat id dignissim sed, accumsan nec nulla. <a href="#">Praesent dapibus lectus ac purus rutrum</a>, vitae dapibus sapien varius. Donec ornare nisi sit amet odio ultrices, ut cursus neque tristique. In hac habitasse platea dictumst. In convallis, libero vitae vulputate mattis, felis neque lacinia ipsum, vel convallis felis massa eget nisi. Nullam neque arcu, posuere ac eros a, venenatis lacinia velit.</p>
+				</div>
+
+			</div>
+		</section><!-- /#footer-holder -->
+
+
+
+
+
+		<footer class="copyright">
+			<div class="inner">
+				<!-- Footer -->
+				<div class="">© 2024 Andre Kors Competitie<?php echo date("Y"); ?> <?= $Wcms->get('config', 'siteTitle') ?></div>
+			</div>
+		</footer>
+
+
+
+
+
+		<!-- Admin JavaScript. More JS libraries can be added below -->
+		<?= $Wcms->js() ?>		
+
+		<script>
+		/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+		function myFunction() {
+			var x = document.getElementById("mainNav");
+			if (x.style.display === "block") {
+				x.style.display = "none";
+			} else {
+				x.style.display = "block";
+			}
+		}
+		</script>
+
+	</body>
+</html>
