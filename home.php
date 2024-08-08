@@ -30,7 +30,7 @@
 		<?= $Wcms->css() ?>
 		
 		<!-- Theme CSS -->
-		<link rel="stylesheet" rel="preload" as="style" href="<?= $Wcms->asset('css/style.css') ?>?ver=1.26">
+		<link rel="stylesheet" rel="preload" as="style" href="<?= $Wcms->asset('css/style.css') ?>?ver=1.67">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
 
 		<script>
@@ -55,9 +55,11 @@
 		<section id="brand-nav"> 
 			<div class="inner">
 
-				<div class="branding">
-					<span class="logo"><a href="/"><img src="<?= $Wcms->asset('img/akc.svg') ?>"></a></span>
-					<span class="name"><?= $Wcms->get('config', 'siteTitle') ?></span>
+				<div class="branding-mobile">
+					<span class="logo"><a href="/"><img src="<?= $Wcms->asset('img/akc-mobile.svg') ?>"></a></span>
+				</div>
+				<div class="branding-desktop">
+					<span class="logo"><a href="/"><img src="<?= $Wcms->asset('img/akc-desktop.svg') ?>"></a></span>
 				</div>
 
 				<div class="main-navigation">
@@ -93,6 +95,9 @@
 		</section><!-- /#page-holder -->
 
 
+<?php include "biljartteams-banner-wcms.php" ;?>
+
+
 		<section id="footer-holder">
 			<div class="inner">				
 				<?= $Wcms->footer() ?>
@@ -103,7 +108,8 @@
 		<footer class="copyright">
 			<div class="inner">
 				<!-- Footer -->
-				<div class="">© <?php echo date("Y"); ?> <?= $Wcms->get('config', 'siteTitle') ?></div>
+				<div class="left">Powered by <a href="https://biljartteams.nl" target="biljartteams">Biljartteams</a></div>
+				<div class="right">© <?php echo date("Y"); ?> <?= $Wcms->get('config', 'siteTitle') ?></div>
 			</div>
 		</footer>
 
