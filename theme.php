@@ -30,6 +30,7 @@
 		<?= $Wcms->css() ?>
 		
 		<!-- Theme CSS -->
+		<link rel="stylesheet" rel="preload" as="style" href="<?= $Wcms->asset('css/style-wcms-admin.css') ?>?ver=0.01">
 		<link rel="stylesheet" rel="preload" as="style" href="<?= $Wcms->asset('css/style.css') ?>?ver=1.67">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
 
